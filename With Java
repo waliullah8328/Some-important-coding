@@ -1,0 +1,272 @@
+
+package basicdata1;
+
+import static java.lang.Math.sqrt;
+import java.util.Scanner;
+
+public class Swich {
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        int digit;
+        System.out.println("1.Determine Trangle");
+        System.out.println("2.Determine Circle");
+        System.out.println("3.Determine Even or Odd");
+        System.out.println("4.Determine Positive or Negative or Zero");
+        System.out.println("5.Determine Vowel Or Consonant");
+        System.out.println("6.Determine Capital letter or Small letter");
+        System.out.println("7.Determine large Number");
+        System.out.println("8.Determine Grade");
+        System.out.println("9.Determine Leap Year");
+        System.out.println("10.Equilateral triangle Area");
+        System.out.println("11.Isosceles triangle Area");
+        System.out.println("12.Scalene triangle Area");
+        
+        
+        
+        System.out.print("Enter your digit: ");
+        digit = input.nextInt();
+       
+        
+        switch(digit)
+                {
+            case 1:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                double b,h, result;
+      
+        System.out.print("Enter your base : ");
+        b = input.nextDouble();
+        System.out.print("Enter your Height : ");
+        h = input.nextDouble();
+        
+        result = 0.5 * b * h ;
+        
+        System.out.println("Area of a trangle : " +result);
+                break;
+            case 2:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                double r, result1;
+      
+        System.out.print("Enter your Range : ");
+        r = input.nextDouble();
+       
+        
+        result1 = 3.1416 * r * r ;
+        
+        System.out.println("Area of a Circle : " +result1);
+                break;
+            case 3:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                 double i;
+      
+        System.out.print("Enter your Number : ");
+        i = input.nextDouble();
+       
+        
+        if(i%2 == 0)
+        {
+          System.out.println("Even Number");  
+        }
+        
+        else
+        {
+            System.out.println("Odd Number");
+        }
+                break;
+            case 4:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                  double k;
+      
+        System.out.print("Enter your Number : ");
+        k = input.nextDouble();
+       
+        
+        if(k>0)
+        {
+          System.out.println("Positive Number");  
+        }
+        
+        else if(k<0)
+        {
+            System.out.println("Negative Number");
+        }
+        else 
+        {
+         System.out.println("Zero");   
+        }
+                break;
+            case 5:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                 char ch;
+      
+        System.out.print("Enter your Character : ");
+        ch = input.next().charAt(0);
+       
+        
+        if(ch == 'a'|| ch == 'e' || ch == 'i' || ch == 'o'|| ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O'  || ch == 'U')
+        {
+          System.out.println("Vowel");  
+        }
+        
+
+        else 
+        {
+         System.out.println("Consonant");   
+        }
+                break;
+            case 6:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                char ch1;
+      
+        System.out.print("Enter your Character : ");
+        ch1 = input.next().charAt(0);
+       
+        
+        if(ch1>='a' && ch1<='z')
+        {
+          System.out.println("Small letter");  
+        }
+        
+
+        else 
+        {
+         System.out.println("Capital letter");   
+        }
+                break;
+            case 7:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                 int num1,num2,large;
+        System.out.print("Enter Two numbers : ");
+        num1 =  input.nextInt();
+        num2 =  input.nextInt();
+        
+        large = (num1>num2)?num1:num2;
+        System.out.println("Large number is : " +large);
+                break;
+            case 8:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                
+                    double a1;
+      
+        System.out.print("Enter your Marks : ");
+        a1 = input.nextInt();
+       
+        
+      if(a1>=80)  
+      {
+         System.out.println("You got A+");  
+      } 
+      else if(a1<80 && a1>=70)  
+      {
+         System.out.println("You got A");  
+      } 
+       else if(a1<70 && a1>=60)  
+      {
+         System.out.println("You got A-");  
+      }
+       
+      else if(a1<60 && a1>=50)  
+      {
+         System.out.println("You got B");  
+      } 
+      
+       else if(a1<50 && a1>=40)  
+      {
+         System.out.println("You got C");  
+      } 
+       
+        else if(a1<40 && a1>=33)  
+      {
+         System.out.println("You got D");  
+      } 
+
+        else 
+        {
+      
+         System.out.println("You are Fail");   
+        }
+                break;
+            case 9:
+                System.out.println("------------------------Please Follow This Step------------------------");
+                int a2;
+      
+        System.out.print("Enter your Year : ");
+        a2 = input.nextInt();
+       
+        
+      if(a2%400 == 0 || a2%4 == 0 && a2%100 != 0)
+      {
+         System.out.println("Leap Year");  
+      } 
+      else 
+        {
+      
+         System.out.println("Not a leap Year");   
+        }
+                break;
+                
+            case 10:
+                System.out.println("--------------------Please follow this steps-----------------------");
+                double a3,result4;
+      
+        System.out.print("Enter your length : ");
+        a3 = input.nextDouble();
+       
+        result4 = 0.433012701 * a3 * a3;
+        
+     
+      
+         System.out.println("Equilateral triangle area : " +result4);
+                break;
+                
+            case 11:
+                System.out.println("--------------------Please follow this steps-----------------------");
+                
+               double a7,a8,result6; 
+        System.out.print("Enter your Same length: ");
+        a7 = input.nextDouble();
+        
+        System.out.print("Enter your Another length: ");
+        a8 = input.nextDouble();
+        
+        
+       
+       
+        result6 = (a8 / 4) * sqrt( a7 * a7 + a8 * a8);
+        
+     
+      
+         System.out.println("Isosceles triangle Area : " +result6);
+                break;
+                
+                
+                case 12:
+                System.out.println("--------------------Please follow this steps-----------------------");
+                
+                double a4,a5,a6,s,result5;
+      
+        System.out.print("Enter your First length: ");
+        a4 = input.nextDouble();
+        
+        System.out.print("Enter your Second length: ");
+        a5 = input.nextDouble();
+        
+        System.out.print("Enter your Third length: ");
+        a6 = input.nextDouble();
+       
+        s = a4 + a5 + a6;
+        result5 = (sqrt(s * (s - a4) * (s - a5) * (s - a6)));
+        
+     
+      
+         System.out.println(" Scalene triangle area : " +result5);  
+                break;
+            default:
+                 System.out.println("Not a letter");
+                break;
+                
+                
+        }
+    }
+    
+}
